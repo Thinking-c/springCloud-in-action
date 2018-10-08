@@ -1,0 +1,22 @@
+spring:
+  profiles: local
+  application:
+    name: eureka-consumer-feign
+server:
+  port: 2301
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+
+---
+spring:
+  profiles: dev
+  application:
+    name: eureka-consumer-feign
+server:
+  port: 2301
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1002/eureka/,http://peer1:1003/eureka/

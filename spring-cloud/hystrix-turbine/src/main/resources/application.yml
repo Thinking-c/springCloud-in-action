@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hystrix-turbine
+server:
+  port: 2701
+management:
+  port: 2705
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+turbine:
+  #多个应用用,分隔
+  app-config: EUREKA-RIBBON-HYSTRIX
+  cluster-name-expression: new String('default')
+  combine-host-port: true

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: swagger-service-b
+server:
+  port: 3201
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+swagger:
+  base-package: com.thinking.swagger.controller
